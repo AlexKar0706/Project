@@ -181,11 +181,11 @@ const gameObject = [{//Start Game
     senderArr: ['So dark', 'I cannot see', 'Wait', 'Here is window', 'I think itss night', 'I see table', 'Cupboard', 'Door...'],
     delayArr: [],
     answersArr: ['Search the table', 'Search the cupboard', 'Open the door'],
-    nextQuestId: [5, 3, 4],
+    nextQuestId: [3, 5, 4],
     func: function (prop) {
         createTransition (this.id, this.senderArr, this.delayArr, this.answersArr, this.nextQuestId, prop);
     }
-}, {//Search the cupboard
+}, {//Search the table
     id: 3,
     senderArr: ['I see something', 'Its a medical record', 'Wait', 'Its mine', 'Why?'],
     delayArr: [],
@@ -565,7 +565,7 @@ async function createTransition (id, senderArr, delayArr, answersArr , nextQuest
     await sleep(1000);
     for (let j = 0; j<senderArr.length; j++) {
         state[prop][i].sender[j] = senderArr[j];
-        if (!delayArr[j]) delayArr[j] = 1500;
+        if (!delayArr[j]) delayArr[j] = 1000;
         await sleep(delayArr[j]);
         if (!senderArr[j+1]) break;
     }
