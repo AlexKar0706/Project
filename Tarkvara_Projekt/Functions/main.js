@@ -9,7 +9,7 @@ $(document).ready(() => {
         "border-radius": "5%"
     };
 
-    setTimeout (() => {
+    /*setTimeout (() => {
         $name.fadeIn("slow", () => {
             $startButton.fadeIn("slow")
         });
@@ -25,7 +25,12 @@ $(document).ready(() => {
             $content.hide(1000);
             $content.animate({width: "show"}, 1000, createMainMenu);
         });
-    })
+    })*/
+    $name.remove();
+    $startButton.remove();
+    const customDiv = $("<div></div>").attr('id','customDiv').css(divCss);
+    $content.wrap(customDiv);
+    createMainMenu();
 });
 
 function createMainMenu() {
