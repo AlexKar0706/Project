@@ -148,3 +148,101 @@ button {
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
+
+.grid-content {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.grid-item {
+    padding: 20px 0;
+    border: 1px grey solid;
+}
+
+.equal-button {
+    grid-row: 4 / span 2;
+    grid-column: 4;
+    background: #007eff;
+}
+
+.item1 {
+    background: #fcfcfc;
+}
+
+.item2 {
+    background: #f1f1f1;
+}
+
+.pressedButton {
+    background: #dbdbdb;
+}
+
+.num-content {
+    margin-right: 10px;
+}
+
+.num-line {
+    text-align: right;
+    font-size: 2em;
+    height: 1.1em;
+}
+
+.line1 {
+    margin-bottom: 5px;
+    margin-top: 0;
+    padding-top: 50px;
+    color: #3c3c3c;
+}
+
+.line2 {
+    margin-top: 5px;
+    padding-bottom: 50px;
+    color: #959595;
+}
+
+.grid-prog {
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.grid-prog > .grid-item {
+    padding: 10px 0;
+}
+
+.line2.prog-line {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.prog-format {
+    text-align: left;
+    margin: 5px 0 0 5px;
+    padding-left: 5px;
+}
+
+.on-format:not(.selected-format) {
+    background: #dbdbdb;
+}
+
+.selected-format {
+    background: rgb(0, 120, 215);
+}
+
+.inactive {
+    color: #c9c9c9;
+    cursor: auto;
+}
+
+.equal-button-prog {
+    grid-row: 6;
+    grid-column: 4 / span 2;
+    background: #007eff;
+}
+
+.white-block {
+    width: 50px;
+    height: 50px;
+    position:  absolute;
+    background: white;
+    margin-top: 30%;
+    border-radius: 5%;
+}
